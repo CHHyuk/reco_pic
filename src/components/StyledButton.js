@@ -1,13 +1,14 @@
 import { Button } from '@mui/material';
 import { styled } from '@mui/system';
+import { backColor,fontColor } from '../constants/color';
 
 const StyledButton = styled(Button)({
-  backgroundColor: 'rgba(50,50,50,1)',
-  color: 'rgba(200,200,200,1)',
+  backgroundColor: backColor,
+  color: fontColor,
   fontWeight: 'bold',
   '&:hover': {
-    backgroundColor: 'rgba(200,200,200,1)',
-    color: 'rgba(50,50,50,1)'
+    backgroundColor: fontColor,
+    color: backColor,
   },
   textTransform: 'none',
 });
