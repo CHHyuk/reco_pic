@@ -17,7 +17,7 @@ export default function Topbar() {
     return (
       <topbar className="top-bar">
         <div className="web-title">
-          WebTitle
+          Lorem picsum
         </div>
         <div className="navigator">
           <StyledButton onClick={mainButtonClick}>
