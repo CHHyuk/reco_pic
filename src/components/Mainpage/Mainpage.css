@@ -1,0 +1,42 @@
+/* Mainpage.css */
+
+body {
+  margin: 0;
+  overflow: hidden; /* 스크롤 막기 */
+}
+
+.container {
+  position: relative;
+  height: 200vh; /* 여러 페이지 붙여놓은 효과를 위해 높은 높이값 설정 */
+}
+
+.backgroundImg {
+  background-image: url('../../img/background-img.png');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 350%;
+  animation: scrollAnimation 10s infinite alternate;
+}
+
+.startButton {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateY(-800px);
+  }
+  50% {
+    transform: translateY(800px);
+  }
+  100% {
+    transform: translateY(-800px);
+  }
+}
