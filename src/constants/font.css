@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,200&family=Roboto:wght@300&display=swap');
+
+* {
+    font-family: 'Noto Serif', serif;
+    font-family: 'Roboto', sans-serif;
+}
