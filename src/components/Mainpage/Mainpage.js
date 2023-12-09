@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyledButton } from '../StyledButton';
 import { useNavigate } from 'react-router-dom';
 import './Mainpage.css';
+import Modal from '../Modal/Modal'
 
 const Mainpage = () => {
   const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const gameButtonClick = () => {
     navigate('/game');
   };
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  }
 
   return (
     <div className="container">
@@ -18,6 +28,8 @@ const Mainpage = () => {
           Start
         </StyledButton>
       </div>
+      <Modal isOpen={isModalOpen} onClose={closeModal}/>
+      <div className='modalButton' onClick={openModal}>❔</div>
     </div>
   );
 };
