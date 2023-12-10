@@ -10,7 +10,14 @@ const Modal = ({ isOpen, onClose }) => {
             <span className="close" onClick={onClose}>
                 &times;
             </span>
-            <p>모달 내용이 여기에 들어갑니다.</p>
+            <p>---------</p>
+            <p>This page was created to use</p>
+            <p>popular and preferred images from lorem picsum</p>
+            <p>Please press the ♡ button</p>
+            <p>to increase your favorability rating</p>
+            <p>Rankings can be checked on LeaderBoard</p>
+            <p>---------</p>
+            <a href="https://github.com/CHHyuk/reco_pic" className="gitButton" target="_blank">go to Github</a>
           </div>
         </div>
       )}

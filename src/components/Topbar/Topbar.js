@@ -24,7 +24,7 @@ export default function Topbar() {
              Main
           </StyledButton>
           <StyledButton onClick={rankButtonClick}>
-             Ladderboard
+            Leaderboard
           </StyledButton>
           <div></div>
         </div>
