@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
 import { styled } from '@mui/system';
-import { backColor,fontColor } from '../constants/color';
+import { backColor,fontColor } from '../constants/constants';
 
 const StyledButton = styled(Button)({
   backgroundColor: backColor,

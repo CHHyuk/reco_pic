@@ -1,12 +1,11 @@
 
 body {
-  margin: 0;
-  overflow: hidden; /* 스크롤 막기 */
+  overflow: hidden; 
 }
 
-.container {
+.main_container {
   position: relative;
-  height: 200vh; /* 여러 페이지 붙여놓은 효과를 위해 높은 높이값 설정 */
+  height: 200vh; 
 }
 
 .backgroundImg {

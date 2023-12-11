@@ -1,7 +1,7 @@
-import Topbar from './components/Topbar/Topbar.js'
-import Gamepage from './components/Gamepage/Gamepage.js'
-import Mainpage from './components/Mainpage/Mainpage.js'
-import Rankingpage from './components/Rankingpage/Rankingpage.js'
+import Topbar from './components/TopBar/TopBar.js'
+import GamePage from './components/GamePage/GamePage.js'
+import MainPage from './components/MainPage/MainPage.js'
+import RankingPage from './components/RankingPage/RankingPage.js'
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -12,9 +12,9 @@ function App() {
     <Router>
       <Topbar/>
         <Routes>
-          <Route path="/" element={<Mainpage />} />
-          <Route path="/game" element={<Gamepage />} />
-          <Route path="/rank" element={<Rankingpage />} />
+          <Route path="/" element={<MainPage />} />
+          <Route path="/game" element={<GamePage />} />
+          <Route path="/rank" element={<RankingPage />} />
         </Routes>
     </Router>
   );
