@@ -1,0 +1,35 @@
+.game_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.game_container .pick_pic {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+  min-height: 60vh;
+}
+
+.game_container .img_box {
+  min-width: 500px;
+}
+
+.bottom_box {
+  display: flex;
+  justify-content: center;
+}
+
+.bottom_box .url_textfield {
+  min-width: 310px;
+  color: rgba(50,50,50,1);
+  border-color: rgba(50,50,50,1);
+}
+
+.bottom_box .alert {
+  background-color: rgba(50,50,50,1);
+  color: rgba(200,200,200,1)
+}
