@@ -17,7 +17,7 @@ export default function TopBar() {
   return (
     <topbar className="top-bar">
       <div className="web-title">
-        Take the image you want
+        get images you want
       </div>
       <div className="navigator">
         <StyledButton onClick={mainButtonClick}>
