@@ -15,7 +15,7 @@ export default function TopBar() {
   }
 
   return (
-    <topbar className="top-bar">
+    <div className="top-bar">
       <div className="web-title">
         get images you want
       </div>
@@ -28,6 +28,6 @@ export default function TopBar() {
         </StyledButton>
         <div></div>
       </div>
-    </topbar>
+    </div>
   );
 }

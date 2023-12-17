@@ -1,10 +1,14 @@
-
 body, ul, li {
     margin: 0;
     padding: 0;
     text-decoration: none;
 }
 
+a {
+    text-decoration: none;;
+}
+
 body {
     background-color: #e2e2e2;
+    overflow: hidden;
 }

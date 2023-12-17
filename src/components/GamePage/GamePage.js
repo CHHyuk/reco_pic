@@ -6,7 +6,6 @@ import UrlComponent from './UrlComponent';
 import ButtonComponent from './ButtonComponent';
 import NotificationComponent from './NotificationComponent';
 import CardSpin from './CardSpin';
-
 import axios from 'axios';
 import './GamePage.css';
 
@@ -15,7 +14,7 @@ export default function GamePage() {
   const [imageUrl, setImageUrl] = useState('');
   const [urlValue, setUrlValue] = useState('');
   const [open, setOpen] = useState(false);
-  const [notificationSeverity, setNotificationSeverity] = useState('');
+  const [notificationSeverity, setNotificationSeverity] = useState('success');
   const [notificationMessage, setNotificationMessage] = useState('');
   const pickPicRef = useRef(null);
 
@@ -31,15 +30,19 @@ export default function GamePage() {
 
   const increaseScore = async (imageId) => {
     try {
-      // 현재 이미지의 점수를 서버에서 가져옵니다.
-      const response = await axios.get(`/api/score/${imageId}`);
+      // 현재 이미지의 점수를 서버에서 가져옵니다. 전체 URL 명시(배포시 삭제)
+      const response = await axios.get(`http://localhost:3001/api/score/${imageId}`);
       const currentScore = response.data.score;
   
       // 점수를 1 증가시킵니다.
       const newScore = currentScore + 1;
   
-      // 새 점수를 서버에 업데이트합니다.
-      await axios.post('/api/score', { imageId, newScore });
+      // 새 점수를 서버에 업데이트합니다. 전체 URL 명시(배포시 삭제)
+      await axios.post('http://localhost:3001/api/score', { imageId, newScore });
+      setNotificationSeverity('success');
+      setNotificationMessage('Score increased!');
+      showNotification();
+
     } catch (error) {
       console.error('Error updating score', error);
     }
