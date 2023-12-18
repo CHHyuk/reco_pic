@@ -30,15 +30,12 @@ export default function GamePage() {
 
   const increaseScore = async (imageId) => {
     try {
-      // 현재 이미지의 점수를 서버에서 가져옵니다. 전체 URL 명시(배포시 삭제)
-      const response = await axios.get(`http://localhost:3001/api/score/${imageId}`);
+      const response = await axios.get(`/api/score/${imageId}`);
       const currentScore = response.data.score;
   
-      // 점수를 1 증가시킵니다.
       const newScore = currentScore + 1;
-  
-      // 새 점수를 서버에 업데이트합니다. 전체 URL 명시(배포시 삭제)
-      await axios.post('http://localhost:3001/api/score', { imageId, newScore });
+
+      await axios.post('/api/score', { imageId, newScore });
       setNotificationSeverity('success');
       setNotificationMessage('Score increased!');
       showNotification();

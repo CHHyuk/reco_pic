@@ -12,7 +12,7 @@ export default function RankingPage() {
   useEffect(() => {
     const fetchRankingData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/api/ranking/top20`);
+        const response = await axios.get(`/api/ranking/top20`);
         setRankingData(response.data);
       } catch (error) {
         console.log('Error loading ranking data', error);
