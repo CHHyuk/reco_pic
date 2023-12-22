@@ -5,6 +5,10 @@ const cors = require('cors')
 const functions = require('firebase-functions');
 
 const pool = mysql.createPool({
+  host: 개
+  user: 인
+  password: 정
+  database: 보
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
