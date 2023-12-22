@@ -8,19 +8,20 @@ export default function RankingPage() {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [notificationSeverity, setNotificationSeverity] = useState('success');
   const [notificationMessage, setNotificationMessage] = useState('Copy success!');
+  const API_BASE_URL = 'https://us-central1-pickyourimages-9bbfd.cloudfunctions.net/api'
 
   useEffect(() => {
     const fetchRankingData = async () => {
       try {
-        const response = await axios.get(`/api/ranking/top20`);
+        const response = await axios.get(`${API_BASE_URL}/ranking/top20`);
         setRankingData(response.data);
       } catch (error) {
         console.log('Error loading ranking data', error);
       }
     };
-
     fetchRankingData();
   }, []);
+  
 
   const handleCopyUrl = (url) => {
     navigator.clipboard.writeText(url).then(() => {

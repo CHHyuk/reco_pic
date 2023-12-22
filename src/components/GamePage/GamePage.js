@@ -17,7 +17,8 @@ export default function GamePage() {
   const [notificationSeverity, setNotificationSeverity] = useState('success');
   const [notificationMessage, setNotificationMessage] = useState('');
   const pickPicRef = useRef(null);
-
+  const API_BASE_URL = 'https://us-central1-pickyourimages-9bbfd.cloudfunctions.net/api'
+  
   useEffect(() => {
     const newImageUrl = `https://picsum.photos/id/${randomImageId}/500/500`;
     setImageUrl(newImageUrl);
@@ -30,16 +31,15 @@ export default function GamePage() {
 
   const increaseScore = async (imageId) => {
     try {
-      const response = await axios.get(`/api/score/${imageId}`);
+      const response = await axios.get(`${API_BASE_URL}/score/${imageId}`);
       const currentScore = response.data.score;
   
       const newScore = currentScore + 1;
-
-      await axios.post('/api/score', { imageId, newScore });
+  
+      await axios.post(`${API_BASE_URL}/score`, { imageId, newScore } );
       setNotificationSeverity('success');
       setNotificationMessage('Score increased!');
       showNotification();
-
     } catch (error) {
       console.error('Error updating score', error);
     }
