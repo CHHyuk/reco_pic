@@ -7,3 +7,8 @@
  - lorem picsum에서 제공하는 id별 이미지 URL을 활용, id 별로 score를 매겨 이미지 평가
  - 평가된 이미지는 순위표에서 1등부터 20등까지 확인 가능
  - 이미지의 URL을 바로 클립보드에 원클릭 저장
+
+## 사용 기술
+ - 프론트 : react
+ - 백 : express
+ - DB : MySQL
