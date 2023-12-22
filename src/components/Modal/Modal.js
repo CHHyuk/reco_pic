@@ -14,8 +14,6 @@ export default function Modal({ isOpen, onClose }) {
             <p>popular and preferred images from lorem picsum.</p>
             <p>Click the buttons to rate or skip.</p>
             <p>Rankings can be checked on LeaderBoard.</p>
-            <p>-----notice----</p>
-            <p>The ranking system is still being implemented.</p>
             <a href="https://github.com/CHHyuk/reco_pic" className="gitButton" target="_blank" rel="noreferrer">go to Github</a>
           </div>
         </div>
